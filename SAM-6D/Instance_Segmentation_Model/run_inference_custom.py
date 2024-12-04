@@ -136,7 +136,7 @@ def run_inference(segmentor_model, output_dir, cad_path, rgb_path, depth_path, c
         image = image * mask[:, :, None]
         templates.append(image)
         masks.append(mask.unsqueeze(-1))
-        
+    
     templates = torch.stack(templates).permute(0, 3, 1, 2)
     masks = torch.stack(masks).permute(0, 3, 1, 2)
     boxes = torch.tensor(np.array(boxes))

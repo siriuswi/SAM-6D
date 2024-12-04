@@ -47,11 +47,11 @@ We also provide a [docker image](https://hub.docker.com/r/lihualiu/sam-6d/tags) 
 ### 2. Evaluation on the custom data
 ```
 # set the paths
-export CAD_PATH=Data/Example/obj_000005.ply    # path to a given cad model(mm)
-export RGB_PATH=Data/Example/rgb.png           # path to a given RGB image
-export DEPTH_PATH=Data/Example/depth.png       # path to a given depth map(mm)
-export CAMERA_PATH=Data/Example/camera.json    # path to given camera intrinsics
-export OUTPUT_DIR=Data/Example/outputs         # path to a pre-defined file for saving results
+export CAD_PATH=$PWD/Data/Example/obj_000005.ply    # path to a given cad model(mm)
+export RGB_PATH=$PWD/Data/Example/rgb.png           # path to a given RGB image
+export DEPTH_PATH=$PWD/Data/Example/depth.png       # path to a given depth map(mm)
+export CAMERA_PATH=$PWD/Data/Example/camera.json    # path to given camera intrinsics
+export OUTPUT_DIR=$PWD/Data/Example/outputs         # path to a pre-defined file for saving results
 
 # run inference
 cd SAM-6D
