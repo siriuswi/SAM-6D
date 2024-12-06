@@ -94,6 +94,7 @@ class Instance_Segmentation_Model(pl.LightningModule):
                     ref_imgs, token_name="x_norm_clstoken"
                 )
                 self.ref_data["descriptors"].append(ref_feats)
+                
 
             self.ref_data["descriptors"].stack()  # N_objects x descriptor_size
             self.ref_data["descriptors"] = self.ref_data["descriptors"].data

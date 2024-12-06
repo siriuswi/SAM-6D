@@ -20,11 +20,12 @@ matching_config:
   metric:
     _target_: model.loss.PairwiseSimilarity
     metric: cosine
-    chunk_size: 16
+    # chunk_size: 16
+    chunk_size: 10
   aggregation_function: avg_5
   confidence_thresh: 0.2
 
 onboarding_config:
-  rendering_type: pbr
+  rendering_type: pyrender
   reset_descriptors: False
   level_templates: 0 # 0 is coarse, 1 is medium, 2 is dense

@@ -55,6 +55,7 @@ class BatchedData:
             self.data = data
         else:
             self.data = []
+            print("===========================data is empty==============================")
 
     def __len__(self):
         assert self.batch_size is not None, "batch_size is not defined"
@@ -74,6 +75,9 @@ class BatchedData:
         self.data.append(data)
 
     def stack(self, dim=0):
+        print("============================debug=========================")
+        print(type(self.data))
+        print(self.data)
         self.data = torch.stack(self.data, dim=dim)
 
 

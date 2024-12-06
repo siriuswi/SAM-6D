@@ -5,7 +5,7 @@ unzip_mode: unzip
 reference_dataloader:
   _target_: provider.bop.BOPTemplate
   obj_ids:
-  template_dir: ${machine.root_dir}/BOP/
+  template_dir: /home/lwchen/SAM-6D/SAM-6D/Data/BOP-Templates/
   level_templates: 0
   pose_distribution: all
   processing_config:
@@ -18,7 +18,7 @@ reference_dataloader:
 
 query_dataloader:
   _target_: provider.bop.BaseBOPTest
-  root_dir: ${machine.root_dir}/BOP/
+  root_dir: /home/lwchen/SAM-6D/SAM-6D/Data/BOP/
   split:
   reset_metaData: True
   processing_config:
